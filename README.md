@@ -4,7 +4,7 @@ This repository contains code that performs a **catalogue matching** task on a c
 Given the catalogue of a retailer as a dataset of photos, the task is to indentificate which of these objects people are wearing in 
 real life photos that we call **queries**.
 ## The Dataset
-We choose a dataset that simplfies a bit the task. It consists in all the dresses of the H&M french online catalogue.    
+The chosen dataset simplfies the task. It consists in all the dresses of the H&M french online catalogue.    
 The **real world** photos consists in the models that wear the items. You get associations like these:
 ### Catalogue Item
 ![alt text](ex_cat.jpg "An item of the catalogue")
@@ -24,14 +24,14 @@ The results are gathered in 3 notebooks:
 -Results 3:   
 
 All these methods rely on the same **features extractor** namely the network **inception v3** used with the TensorFlow framework.    
-We evaluate these methods according to the **10-accuracy** measure: we want each query's corresponding iem to appear in the top 10 of the
-method's output.      
+These methods are evaluated according to the **10-accuracy** measure: each query's corresponding iem has to appear in the top 10 of the
+method's output to be considered as well classified.      
 All the notebook contains explantions about the method used, you'll find a summary just after.   
 ###Feature Extraction   
-We use the **inception v3** network with TensorFlow as a feature extractor.    
+The **inception v3** network is the feature extractor, it is used with TensorFlow.    
 The model should be put in the **models** file, you can follow this tutorial to download it:    
 https://www.kernix.com/blog/image-classification-with-a-pre-trained-deep-neural-network_p11    
-We have used routines from this article in our code.    
+Routines from this article can be found in the code.    
 ###Results 1
-It implements the simplest way we could use a feature extractor: just compare features of the catalogue directly with those of the queries.   
-It achieve a 30% 10-accuracy. It is not good because we do not *look where we should*.
+It implements the simplest way a feature extractor could be used: just compare features of the catalogue directly with those of the queries.   
+It achieve a 30% 10-accuracy. It is not good because it does not *look where it should*.
