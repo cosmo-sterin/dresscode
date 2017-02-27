@@ -19,13 +19,13 @@ adequate to the DB. This variable stores ill-formed examples (where no models we
 There were 10 such items when the experiment was made.   
 ## Results   
 The results are gathered in 3 notebooks:   
--Results 1: 30% 10-accuracy   
--Results 2:
--Results 3:
+-Results 1: Achieves 30% at 10-accuracy   
+-Results 2:      
+-Results 3:   
 
-All these methods relies on the same **features extractor** namely the network **inception v3** used with the TensorFlow framework.    
+All these methods rely on the same **features extractor** namely the network **inception v3** used with the TensorFlow framework.    
 We evaluate these methods according to the **10-accuracy** measure: we want each query's corresponding iem to appear in the top 10 of the
-method's output.
+method's output.      
 All the notebook contains explantions about the method used, you'll find a summary just after.   
 ###Feature Extraction   
 We use the **inception v3** network with TensorFlow as a feature extractor.    
