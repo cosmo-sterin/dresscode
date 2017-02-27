@@ -19,9 +19,9 @@ adequate to the DB. This variable stores ill-formed examples (where no models we
 There were 10 such items when the experiment was made.   
 ## Results   
 The results are gathered in 3 notebooks:   
--Results 1: Achieves 30% at 10-accuracy   
--Results 2:      
--Results 3:   
+-Results 1, "Take All": Achieves **30%** at 10-accuracy   
+-Results 2, "Centered Crop": Achieves **51%** at 10-accuracy     
+-Results 3, "Refined Crops":   
 
 All these methods rely on the same **features extractor** namely the network **inception v3** used with the TensorFlow framework.    
 These methods are evaluated according to the **10-accuracy** measure: each query's corresponding iem has to appear in the top 10 of the
@@ -32,6 +32,13 @@ The **inception v3** network is the feature extractor, it is used with TensorFlo
 The model should be put in the **models** file, you can follow this tutorial to download it:    
 https://www.kernix.com/blog/image-classification-with-a-pre-trained-deep-neural-network_p11    
 Routines from this article can be found in the code.    
-###Results 1
+###Results 1, "Take All"
 It implements the simplest way a feature extractor could be used: just compare features of the catalogue directly with those of the queries.   
 It achieve a 30% 10-accuracy. It is not good because it does not *look where it should*.
+###Results 2, "Centered Crop"   
+The first idea to **look where it should** is that, because this dataset presents only **centered** photos, useful information
+in the query has a good probability to be around the center.   
+So the queries are first croped in their center before their features are computed.   
+These crops are still compared to the entire items in the catalogue.      
+It gives a **51%** 10-accuracy.   
+It is better but it may not look were it should either, maybe the relevant information is not in the center of the query. Also the catalogue item should be croped for better results.     
