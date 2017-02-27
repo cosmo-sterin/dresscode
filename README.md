@@ -21,7 +21,7 @@ There were 10 such items when the experiment was made.
 The results are gathered in 3 notebooks:   
 -Results 1, "Take All": Achieves **30%** at 10-accuracy   
 -Results 2, "Centered Crop": Achieves **51%** at 10-accuracy     
--Results 3, "Refined Crops":   
+-Results 3, "Refined Crops": Achieves **71%** at 10-accuracy
 
 All these methods rely on the same **features extractor** namely the network **inception v3** used with the TensorFlow framework.    
 These methods are evaluated according to the **10-accuracy** measure: each query's corresponding iem has to appear in the top 10 of the
@@ -42,3 +42,16 @@ So the queries are first croped in their center before their features are comput
 These crops are still compared to the entire items in the catalogue.      
 It gives a **51%** 10-accuracy.   
 It is better but it may not look were it should either, maybe the relevant information is not in the center of the query. Also the catalogue item should be croped for better results.     
+###Results 3, "Refined Crops"
+The structure of our photos is quite simple.     
+Each photo of the catalogue is divided into tiles on a 4x5 grid, the useful information is to be found in two tiles, (1,2) and (2,2). The same kind of heuristic is used to isolate information with queries.     
+Thus each catalogue item and query give 2 feature vectors.  
+For a query each catalogue item is ranked according the best matcher among these 4 feature vectors.    
+This method gives a **71%** 10-accuracy.
+This **hand-made** heuristic to crop the images of this dataset can be justified in our application setting:   
+-The retailer can make the relevant crops when it builds its catalogue    
+-The user can zoom over what interests him when he make the query    
+However this example emphasizes the **importance of selecting relevant part of the clothes**, wether it is done by hand or automatically.   
+Methods in the spirit of "Points of Interets" as used in SIFT descriptors could be used to get rid of this hand-crafted dataset
+specific part of the method.    
+Enventually to handle more crops efficiently in memory, techniques such as **memory vectors** could be used.    
