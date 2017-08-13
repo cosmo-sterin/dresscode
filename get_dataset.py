@@ -2,6 +2,11 @@ import requests
 import string
 from html.parser import HTMLParser
 from io import open as iopen
+import os
+
+if not os.path.exists('db'):
+    os.makedirs('db')
+
 
 article_list = []
 class MyHTMLParser(HTMLParser):
@@ -59,6 +64,11 @@ article_url = "/fr_fr/productpage."
 
 to_mine_type = ["robes"]
 to_mine_url = ["fr_fr/femme/catalogue-par-produit/robes.html?product-type=ladies_dresses&image=model&sort=stock&offset=0&page-size=400"]
+
+for t in to_mine_type:
+    if not os.path.exists('db/'+str(t)):
+        os.makedirs('db/'+t+'/cat')
+        os.makedirs('db/'+t+'/mod')
 
 for (i,t) in enumerate(to_mine_type):
     print("Mining "+t+"...")
