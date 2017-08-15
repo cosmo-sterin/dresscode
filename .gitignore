@@ -1,2 +1,5 @@
 models/*
+dumps/*
+db/robes/cat/*
+db/robes/mod/*
 .ipynb_checkpoints
