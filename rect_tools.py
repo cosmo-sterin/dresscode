@@ -1,4 +1,13 @@
 import numpy as np
+import cv2
+
+'''
+    Our rectangle notation convention is (x,y,w,h).
+    With (x,y) top left corner.
+    The following functions are some useful routines to 
+    manipulate rectangles.
+
+'''
 
 def get_rect_img(img):
     return (0,0,img.shape[1],img.shape[0])
@@ -23,3 +32,6 @@ def le_pt(a,b):
 # is a valid rect
 def valid_rect(rect_whole,rect_query):
     return le_pt(rect_whole[:2], rect_query[:2]) and le_pt(get_end_point(rect_query),get_end_point(rect_whole))
+#draws a rectangle on an images
+def draw_rectangle(img, rect, color=(255,0,0), thick=2):
+    cv2.rectangle(img,rect[:2],get_end_point(rect),color,thick)
