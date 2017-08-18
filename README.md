@@ -18,7 +18,7 @@ At the time the experiment was made it consisted in 210 items, the photos are of
 adequate to the DB. This variable stores ill-formed examples (where no models wear the item or ill formated jpg files).  
 ## Structure of this repo
 Here's a short description of each file in this repo:    
-- report.pdf: main file of this repo, it explains all of what this is about.      
+- `report.pdf`: main file of this repo, it explains all of what this is about.      
 - Results_DCNNs.ipynb: main results of our work, using deep neural features in order to retrieve intraclass apparels.      
 - Results_ORB_BagOfWords.ipynb: implementation of "old-school" Bag-Of-Words method on the same problem for comparison purpose.
 - Visualization_SOM.py: various features visualization with the Self-Organizing Map.     
