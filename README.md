@@ -1,5 +1,5 @@
 This repository contains code that performs a **catalogue matching** task on a custom apparel dataset with Deep Convolutional Neural Networks (DCNNs) techniques.
-Please consider looking at this [report](https://github.com/tcosmo/dresscode/blob/master/report.pdf) for a full description of this work.
+Please consider looking at the [report](https://github.com/tcosmo/dresscode/blob/master/report.pdf) for a full description of this work.
 ## Catalogue Matching
 Given the catalogue of a retailer as a dataset of photos, the task is to indentificate which of these objects people are wearing in 
 real life photos that we call **queries**.
