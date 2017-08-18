@@ -18,17 +18,17 @@ At the time the experiment was made it consisted in 210 items, the photos are of
 adequate to the DB. This variable stores ill-formed examples (where no models wear the item or ill formated jpg files).  
 ## Structure of this repo
 Here's a short description of each file in this repo:    
--report.pdf: main file of this repo, it explains all of what this is about.      
--Results_DCNNs.ipynb: main results of our work, using deep neural features in order to retrieve intraclass apparels.      
--Results_ORB_BagOfWords.ipynb: implementation of "old-school" Bag-Of-Words method on the same problem for comparison purpose.
--Visualization_SOM.py: various features visualization with the Self-Organizing Map.     
--cache.py: caching tools, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).     
--data_manager.py: routines for data management.    
--download.py: models downloading utility, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).   
--get_dataset.py: our script for dataset gathering.    
--inception.py: manipulation of the inception v3 model, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).    
--rect_tools.py: routines for manipulating rectangles.     
--som.py: our implementation of the SOM.      
--to_ignore.txt: specify db items to ignore.           
--models/: where to store tensorflow models.     
--dumps/: where to store dumps of heavy calculations.     
+- report.pdf: main file of this repo, it explains all of what this is about.      
+- Results_DCNNs.ipynb: main results of our work, using deep neural features in order to retrieve intraclass apparels.      
+- Results_ORB_BagOfWords.ipynb: implementation of "old-school" Bag-Of-Words method on the same problem for comparison purpose.
+- Visualization_SOM.py: various features visualization with the Self-Organizing Map.     
+- cache.py: caching tools, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).     
+- data_manager.py: routines for data management.    
+- download.py: models downloading utility, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).   
+- get_dataset.py: our script for dataset gathering.    
+- inception.py: manipulation of the inception v3 model, directly issued from this [awesome github repo](https://github.com/Hvass-Labs/TensorFlow-Tutorials).    
+- rect_tools.py: routines for manipulating rectangles.     
+- som.py: our implementation of the SOM.      
+- to_ignore.txt: specify db items to ignore.           
+- models/: where to store tensorflow models.     
+- dumps/: where to store dumps of heavy calculations.     
